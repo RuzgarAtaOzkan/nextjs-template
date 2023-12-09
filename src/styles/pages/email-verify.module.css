@@ -1,0 +1,43 @@
+.section {
+  height: 50vh;
+  display: flex; justify-content: center; align-items: center;
+}
+
+.section-info {
+  text-align: center;
+}
+
+.section-info > svg {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  width: 48px; height: 48px;
+}
+
+.section-info > h2 {
+
+}
+
+.section-info-iconloading {
+  animation: spin 1s infinite linear;
+}
+
+.section-info-iconcross {
+  color: rgb(214, 62, 62);
+  color: var(--color-red);
+}
+
+.section-info-iconcheck {
+  color: rgb(64, 204, 51);
+  color: var(--color-green);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+

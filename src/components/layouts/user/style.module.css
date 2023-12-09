@@ -1,0 +1,12 @@
+.main {
+  margin-top: var(--comp-header-height);
+  transition: all .3s ease-out;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  .main {
+    margin-top: 0;
+  }
+}
+
