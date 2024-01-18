@@ -7,14 +7,17 @@ const initial_state = {
   ui_sidebar_open: false,
   ui_toasts: [],
   // user props
-  user_auth: null, // false = logged out, true = logged in, null = waiting for the server response
-  // httponly cookie in the browser's backend for authentication
-  user_id: null,
-  user_username: null,
-  user_email: null,
-  user_email_verified: null,
-  user_role: null,
-  user_img: null,
+
+  user: {
+    auth: null, // false = logged out, true = logged in, null = waiting for the server response
+    // httponly cookie in the browser's backend for authentication
+    _id: '',
+    username: '',
+    email: '',
+    email_verified: false,
+    role: 'user',
+    img: '',
+  },
   // wallet props
   wallet_address: null,
 };

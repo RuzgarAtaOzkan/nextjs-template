@@ -26,6 +26,12 @@ class Layout_user extends React.Component {
     this.state = {};
   }
 
+  componentDidMount() {}
+
+  componentDidUpdate() {}
+
+  componentWillUnmount() {}
+
   render() {
     return (
       <>
