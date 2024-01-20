@@ -16,23 +16,28 @@ import UTILS_API from '../utils/api.js';
 // STYLES
 import style from '../styles/pages/home.module.css';
 
+// SERVER SIDE
+export async function getServerSideProps({ req }) {
+  console.log(req.ip);
+
+  return {
+    props: {},
+  };
+}
+
+// CLIENT SIDE
 class Home extends React.Component {
   static contextType = Context;
 
   constructor(props) {
     super(props);
     this.state = {};
-
-    this.test = this.test.bind(this);
-  }
-
-  async test() {
-    const res = await UTILS_API.axios_instance.get('https://google.com');
-    console.log(res.data);
   }
 
   componentDidMount() {
-    this.test();
+    console.log('this.props:', this.props);
+    console.log('this.context:', this.context);
+    console.log('this.state:', this.state);
   }
 
   componentDidUpdate() {}
@@ -43,9 +48,7 @@ class Home extends React.Component {
     return (
       <>
         <Head title="Next.js" desc="desc" />
-        <Layout_user>
-          <div className={cn(style['test'])}>test</div>
-        </Layout_user>
+        <Layout_user>main</Layout_user>
       </>
     );
   }

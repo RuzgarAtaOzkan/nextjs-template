@@ -7,7 +7,10 @@ const initial_state = {
   ui_sidebar_open: false,
   ui_toasts: [],
   // user props
-
+  ui: {
+    sidebar_open: false,
+    toasts: [],
+  },
   user: {
     auth: null, // false = logged out, true = logged in, null = waiting for the server response
     // httponly cookie in the browser's backend for authentication
